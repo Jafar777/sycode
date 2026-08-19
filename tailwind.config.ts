@@ -8,18 +8,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: {
-          950: "#080E1F",
-          900: "#0B1330",
-          800: "#101B45",
-          700: "#162458",
+        ink: {
+          950: "#000000",
+          900: "#050505",
+          800: "#0C0C0E",
+          700: "#151518",
+          600: "#212226",
         },
-        cyan: {
-          400: "#3FE3E0",
-          500: "#22D3D9",
+        steel: {
+          200: "#E4E5E8",
+          300: "#C7CBD1",
+          400: "#A9AEB6",
+          500: "#8B909A",
         },
-        ink: "#0B1330",
-        cloud: "#F5F7FB",
+        line: "rgba(255,255,255,0.09)",
       },
       fontFamily: {
         display: ["var(--font-display)"],
@@ -28,7 +30,10 @@ const config: Config = {
       },
       backgroundImage: {
         "grid-lines":
-          "linear-gradient(rgba(63,227,224,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(63,227,224,0.08) 1px, transparent 1px)",
+          "linear-gradient(rgba(255,255,255,0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.055) 1px, transparent 1px)",
+      },
+      letterSpacing: {
+        widest2: "0.22em",
       },
     },
   },

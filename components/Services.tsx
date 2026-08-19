@@ -27,16 +27,24 @@ export default function Services() {
   return (
     <section id="services" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
       <div className="text-center">
-        <h2 className="font-display text-3xl font-bold text-navy-900">Our Services</h2>
-        <p className="mt-3 text-slate-500">Precision web and mobile builds, end to end</p>
+        <p className="font-mono text-[11px] uppercase tracking-widest2 text-steel-500">01 — Capabilities</p>
+        <h2 className="mt-3 font-display text-2xl font-bold uppercase tracking-wide text-white sm:text-3xl">
+          Our Services
+        </h2>
+        <p className="mt-3 text-steel-500">Precision web and mobile builds, end to end</p>
       </div>
 
-      <div className="mt-14 grid gap-10 sm:grid-cols-2">
+      <div className="mt-14 grid gap-6 sm:grid-cols-2">
         {services.map((s) => (
-          <div key={s.title} className="rounded-xl p-6 transition hover:bg-white hover:shadow-lg hover:shadow-navy-900/5">
-            <div className="text-cyan-500">{s.icon}</div>
-            <h3 className="mt-4 font-display text-lg font-bold text-navy-900">{s.title}</h3>
-            <p className="mt-2 max-w-sm text-sm leading-relaxed text-slate-500">{s.copy}</p>
+          <div
+            key={s.title}
+            className="rounded-md border border-line p-8 transition hover:border-steel-400/40 hover:bg-ink-900"
+          >
+            <div className="text-steel-300">{s.icon}</div>
+            <h3 className="mt-5 font-display text-base font-bold uppercase tracking-wide text-white">
+              {s.title}
+            </h3>
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-steel-500">{s.copy}</p>
           </div>
         ))}
       </div>

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import { Syncopate, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const display = Space_Grotesk({
+const display = Syncopate({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["400", "700"],
   variable: "--font-display",
   display: "swap",
 });
@@ -24,9 +24,16 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SynCode — We Code Websites & Mobile Apps",
+  title: "syncode — we code websites & mobile apps",
   description:
-    "SynCode builds fast, reliable websites and mobile apps. Web development, mobile app development, and everything in between.",
+    "syncode builds fast, reliable websites and mobile apps. Web development, mobile app development, and everything in between.",
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -36,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
-      <body className="font-body antialiased">{children}</body>
+      <body className="bg-ink-950 font-body antialiased">{children}</body>
     </html>
   );
 }

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Features", href: "#services" },
@@ -7,18 +9,25 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-navy-900/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-line bg-black/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <a href="#home" className="font-display text-xl font-bold tracking-tight text-white">
-          SYN<span className="text-cyan-400">CODE</span>
+        <a href="#home" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="syncode"
+            width={1016}
+            height={224}
+            priority
+            className="h-6 w-auto sm:h-7"
+          />
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-9 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-slate-300 transition hover:text-white"
+              className="font-mono text-[11px] uppercase tracking-widest2 text-steel-400 transition hover:text-white"
             >
               {link.label}
             </a>
@@ -26,23 +35,22 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-6 md:flex">
-          <a href="#contact" className="text-sm font-medium text-slate-300 transition hover:text-white">
+          <a href="#contact" className="font-mono text-[11px] uppercase tracking-widest2 text-steel-400 transition hover:text-white">
             Log In
           </a>
           <a
             href="#contact"
-            className="rounded-md border border-cyan-400/60 px-4 py-2 text-sm font-semibold text-cyan-300 transition hover:bg-cyan-400 hover:text-navy-950"
+            className="rounded-sm border border-steel-400/50 px-5 py-2 font-mono text-[11px] uppercase tracking-widest2 text-steel-200 transition hover:border-white hover:bg-white hover:text-black"
           >
             Get Started
           </a>
         </div>
 
-        {/* mobile menu button, non-functional placeholder kept minimal */}
         <a
           href="#contact"
-          className="rounded-md border border-cyan-400/60 px-3 py-1.5 text-xs font-semibold text-cyan-300 md:hidden"
+          className="rounded-sm border border-steel-400/50 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest2 text-steel-200 md:hidden"
         >
-          Get Started
+          Start
         </a>
       </div>
     </header>
